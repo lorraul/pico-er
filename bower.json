@@ -1,0 +1,17 @@
+{
+  "name": "pico-er",
+  "homepage": "https://github.com/lorraul/pico-er",
+  "authors": [
+    "lorraul <lorraul@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

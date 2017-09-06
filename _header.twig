@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+
+    {% if meta.description %}
+    <meta name="description" content="{{ meta.description|striptags }}"> {% endif %} {% if meta.robots %}
+    <meta name="robots" content="{{ meta.robots }}"> {% endif %}
+
+    <link rel="stylesheet" href="{{ theme_url }}/style/style.css" type="text/css" />
+    <link rel="stylesheet" href="{{ theme_url }}/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="{{ theme_url }}/bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="{{ theme_url }}/bower_components/bootstrap-social/bootstrap-social.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
+
+    <script src="{{ theme_url }}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ theme_url }}/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ base_url }}">{{ site_title }}</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% for page in pages if page.meta.menu=='nav'%}
+                        <li{% if page.id==current_page.id %} class="active" {% endif %}><a href="{{ page.url }}">{{ page.title }}</a></li>
+                            {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="top-ad">
+        <div class="container">
+            <img src="http://via.placeholder.com/900x60" style="margin:0 auto;display:block;">
+        </div>
+    </section>
+
+    <section id="content">
+        <div class="container">

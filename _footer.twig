@@ -1,0 +1,26 @@
+</div>
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-3">
+                <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-tumblr" href="http://www.tumblr.com//"><i class="fa fa-tumblr"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <i class="fa fa-envelope"></i>: <a href="mailto:mail@example.com">mail@example.com</a>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                {% for page in pages if page.meta.menu=='footer'%}
+                <a href="{{ page.url }}">{{ page.title }}</a> &#9679; {% endfor %}
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{% include '_header.twig' %}
+<div class="row">
+    {% for page in pages if page.meta.template=='post'%}
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="post-preview">
+            <a href="{{ page.url }}" class="title">{{ page.title }}</a> {%if page.meta.author or page.meta.date%}
+            <div class="meta">
+                {%if page.meta.author%}by {{page.meta.author}}{% endif %} {%if page.meta.author and page.meta.date%}, {% endif %} {%if page.meta.date%}{{page.meta.date}}{% endif %}
+            </div>
+            {% endif %}
+            <div class="description">{{page.description}}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% include '_footer.twig' %}
