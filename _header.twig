@@ -41,7 +41,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         {% for page in pages if page.meta.menu=='nav'%}
                         <li{% if page.id==current_page.id %} class="active" {% endif %}><a href="{{ page.url }}">{{ page.title }}</a></li>
-                            {% endfor %}
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

@@ -24,6 +24,12 @@
 .post-preview .meta {
   font-size: 12px;
 }
+.post-preview .image {
+  margin-top: 5px;
+}
+.post-preview .image img {
+  width: 100%;
+}
 .post-preview .description {
   margin-top: 10px;
 }
@@ -39,6 +45,9 @@
 #left-side h3,
 #left-side h4 {
   font-family: 'Crete Round', serif;
+}
+#left-side .content-thumb {
+  float: right;
 }
 #right-side {
   overflow: hidden;
