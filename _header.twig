@@ -11,6 +11,18 @@
     {% if meta.description %}
     <meta name="description" content="{{ meta.description|striptags }}"> {% endif %} {% if meta.robots %}
     <meta name="robots" content="{{ meta.robots }}"> {% endif %}
+    
+    <meta property="og:url" content="{{ current_page.url }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ meta.title }}" />
+    <meta property="og:description" content="{{ meta.description|striptags }}" />
+    {% if meta.image %}
+    <meta property="og:image" content="http://res.cloudinary.com/{{ config.cloudinary }}/image/upload/c_scale,w_600/v2000/{{ meta.image }}.jpg" />
+    {% elseif config.default_image_url %}
+    <meta property="og:image" content="{{ config.default_image_url }}" />
+    {% else %}
+    <meta property="og:image" content="http://via.placeholder.com/600x400" />
+    {% endif %}
 
     <link rel="stylesheet" href="{{ theme_url }}/style/style.css" type="text/css" />
     <link rel="stylesheet" href="{{ theme_url }}/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
@@ -26,7 +38,7 @@
 <body>
 
     <header id="header">
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">

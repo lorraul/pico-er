@@ -18,6 +18,9 @@ Clone the repository to `themes` directory.
 
 ### config.php:
 
+Set default image preview used in og tags if meta image is not present
+`$config['default_image_url'] = 'http://via.placeholder.com/600x400';`
+
 Set urls for social network pages:
 ```
 $config['facebook'] = 'https://www.facebook.com/';
