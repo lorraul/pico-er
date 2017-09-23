@@ -1,17 +1,22 @@
-Pico-er theme for Pico CMS
+### Pico-er theme for Pico CMS
 
-##Install
+Needed plugins:
+
+* [modified Pico-Tags](https://github.com/lorraul/Pico-Tags)
+
+### Install
 
 Clone the repository to `themes` directory.
 
-##Md meta options:
+### Meta options:
 
-`Menu` Option to insert page link to menu sections: `Menu:nav` or `Menu: footer`.
-`Image`: Cloudinary public id of an image. Will be included in OG tags, post listing pages and post pages.
+* `Menu` Option to insert page link to menu sections: `Menu:nav` or `Menu: footer`.
+
+* `Image`: Cloudinary public id of an image. Will be included in OG tags, post listing pages and post pages.
 
 
 
-##config.php:
+### config.php:
 
 Set urls for social network pages:
 ```
